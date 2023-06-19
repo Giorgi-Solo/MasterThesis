@@ -43,8 +43,7 @@ syn_data_analyzer.py:
 	@python3 syn_data_analyzer.py
 
 clean: 
-	rm -rf simulations/sim_results
-	rm -rf simulations/syn_results
+
 	rm -rf syn_log.txt
 	rm -rf sim_log.txt
 	rm -rf newUVMLogs/*
