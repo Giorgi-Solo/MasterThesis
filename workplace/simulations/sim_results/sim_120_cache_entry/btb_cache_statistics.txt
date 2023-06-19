@@ -1,0 +1,7 @@
+size   of BTB_BHT_cache           = 120 entries
+width  of BTB_BHT_cache           = 7 bits
+number of valid entries           = 98 entries
+number of branch instrs           = 1816
+number of predictions             = 1261
+number of corr predictions        = 1008
+number of incorr inpredictions    = 253
