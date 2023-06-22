@@ -3,10 +3,13 @@ DESIGN_NAME=cv32e40x
 clone_sim_env:
 	@echo "Simulation/Verification environment is being cloned from openhwgroup github public repository"
 	@cd ../ && git clone https://github.com/openhwgroup/core-v-verif.git
+	@cd ../ && rm -rf master && mkdir master && cd master && git clone https://github.com/Giorgi-Solo/cv32e40x.git
 
 clone_synth_env:
 	@echo "Synthesis environment is being cloned from NTNU asic-flow github private Repository"
 	@cd ../ && git clone https://github.com/EECS-NTNU/asic-flow.git
+	@cd ../ && rm -rf master && mkdir master && cd master && git clone https://github.com/Giorgi-Solo/cv32e40x.git
+
 
 sim:
 	@echo "Makefile from workplace is running simulations"
@@ -31,6 +34,7 @@ reportLogs:
 	@python3 show_log.py
 
 model:
+	@rm -rf newUVMLogs && mkdir newUVMLogs
 	@echo "Running Model of the core with Predictor"
 	@python3 logParser.py
 
